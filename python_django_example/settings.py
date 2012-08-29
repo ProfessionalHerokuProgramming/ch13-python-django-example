@@ -9,9 +9,9 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-import dj_database_url
-DATABASES = {'default': dj_database_url.config(default='postgres://ulgeuehnsxfhvp:9Z5OAdhEoAd7v2Q0Em6pwbmnqO@ec2-23-21-209-35.compute-1.amazonaws.com:5432/dfdtmkllsm194q')}
-
+DATABASES = {
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
