@@ -10,8 +10,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 import dj_database_url
-DATABASES['default'] = dj_database_url.config()
-
+DATABASES = {'default': dj_database_url.config(default='postgres://ulgeuehnsxfhvp:9Z5OAdhEoAd7v2Q0Em6pwbmnqO@ec2-23-21-209-35.compute-1.amazonaws.com:5432/dfdtmkllsm194q')}
 
 
 # Local time zone for this installation. Choices can be found here:
